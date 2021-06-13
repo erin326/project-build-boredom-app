@@ -2,6 +2,9 @@
 
 <html lang="en">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
         <link rel="stylesheet" href="style.css">
         <title>Boredom Breaker</title>
     </head>
@@ -14,11 +17,45 @@
         <div class= "buttons">
             <h2>Choose a random activity</h2>
             <button id="random">Random</button>
+            <ul id="random-activity-list">
+            </ul>
+
             <div>
                 <h2>Choose by Type</h2>
-                <button id="activity-type">Activity Types</button>
 
-                <ul id="activity-types-list"></ul>
+                <div class="activity-types-list">
+                    <button id="education-button">Education</button>
+                    <ul id="education-list">
+
+                    </ul>
+
+                    
+                    <button id="relaxation-button">Relaxation</button>
+                    <ul id="relaxation-list"></ul>
+                    <button id="social-button">Social</button>
+                    <ul id="social-list"></ul>
+
+                    <button id="recreational-button">Recreational</button>
+                    <ul id="recreational-list"></ul>
+
+                    <button id="diy-button">DIY</button>
+                    <ul id="diy-list"></ul>
+
+                    <button id="charity-button">Charity</button>
+                    <ul id="charity-list"></ul>
+
+                    <button id="cooking-button">Cooking</button>
+                    <ul id="cooking-list"></ul>
+
+                    <button id="music-button">Music</button>
+                    <ul id="music-list"></ul>
+
+                    <button id="busywork-button">Busywork</button>
+                    <ul id="busywork-list"></ul>
+
+                   
+                    </div>
+                
             </div>
 
             <form class="add-price-range">
@@ -38,10 +75,15 @@
                 value="Submit Price"
                 class="submit"
                 />
+
+                <ul id="price-ranged-activities"></ul>
             </form>
+
             
         </div>
 
+
+ 
 
         <script src="index.js"></script>
     </body>
