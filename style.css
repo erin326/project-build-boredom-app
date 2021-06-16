@@ -1,0 +1,34 @@
+body {
+    background-color: rgb(255, 255, 255);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 22px;
+    text-align:center;
+    
+    padding-bottom: 50px;
+   
+
+}
+
+ .content:not(:first-child) {
+    display:none;
+} 
+
+
+
+ul {
+    text-align: left;
+    display: inline-block;
+}
+
+button {
+    background-color: rgb(224, 52, 152);
+    color: rgb(255, 255, 255);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 22px;
+    text-align: center;
+}
+
+input {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 22px;
+}

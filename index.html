@@ -13,81 +13,67 @@
         <h1>Boredom Breaker</h1>
 
         <h3>Welcome, fellow bored human! Be bored no more! </h3>
+        
+        <ul id="activity-list"></ul>
 
-        <div class= "buttons">
-            <h2>Choose a random activity</h2>
-            <button id="random">Random</button>
-            <ul id="random-activity-list">
-            </ul>
 
-            <div>
-                <h2>Choose by Type</h2>
+        <div class= "selection">
 
-                <div class="activity-types-list">
-                    <button id="education-button">Education</button>
-                    <ul id="education-list">
+            <button id="random" data-name="random" type="button" class="active">Random</button>
 
-                    </ul>
+            <button id="education-button" data-name="education" type="button">Education</button>
 
-                    
-                    <button id="relaxation-button">Relaxation</button>
-                    <ul id="relaxation-list"></ul>
-                    <button id="social-button">Social</button>
-                    <ul id="social-list"></ul>
+            <button id="relaxation-button" data-name="relaxation" type="button">Relaxation</button>
 
-                    <button id="recreational-button">Recreational</button>
-                    <ul id="recreational-list"></ul>
+            <button id="social-button" data-name="social" type="button">Social</button>
 
-                    <button id="diy-button">DIY</button>
-                    <ul id="diy-list"></ul>
+            <button id="recreational-button" data-name="recreational" type="button">Recreational</button>
 
-                    <button id="charity-button">Charity</button>
-                    <ul id="charity-list"></ul>
+            <button id="diy-button" data-name="diy" type="button">DIY</button>
 
-                    <button id="cooking-button">Cooking</button>
-                    <ul id="cooking-list"></ul>
+            <button id="charity-button" data-name="charity" type="button">Charity</button>
 
-                    <button id="music-button">Music</button>
-                    <ul id="music-list"></ul>
+            <button id="cooking-button" data-name="cooking" type="button">Cooking</button>
 
-                    <button id="busywork-button">Busywork</button>
-                    <ul id="busywork-list"></ul>
+            <button id="music-button" data-name="music" type="button">Music</button>
 
-                   
-                    </div>
-                
-            </div>
+            <button id="busywork-button" data-name="busywork" type="button">Busywork</button>
+           
 
-            <form class="add-price-range">
-                <h3>Enter a price range</h3>
-
-                <input type="text" name="min" value="" placeholder="Enter a minimum price"
-                class="input-price"
-                />
-                <br />
-
-                <input type="text" name="max" value="" placeholder="Enter a maximum price"
-                class="input-price"
-                />
-                <br/>
-                <input type="submit"
-                name="submit"
-                value="Submit Price"
-                class="submit"
-                />
-
-                <ul id="price-ranged-activities"></ul>
-            </form>
-
-            
         </div>
 
+        <div class="contentSection">
+            <p class ="content" data-name="random">Content of random button</p>
+            <p class ="content" data-name="education">Content of education button</p> <p class ="content" data-name="relaxation">Content of relaxation button</p> <p class ="content" data-name="social">Content of social button</p> <p class ="content" data-name="recreational">Content of recreational button</p> <p class ="content" data-name="diy">Content of diy button</p> <p class ="content" data-name="charity">Content of charity button</p> <p class ="content" data-name="cooking">Content of cooking button</p> <p class ="content" data-name="music">Content of music button</p> <p class ="content" data-name="busywork">Content of busywork button</p>
+            
 
- 
+        </div>
+
+        
+        <form class="add-price-range">
+            <h2>Enter a price level (0-8) </h2>
+            <p>0 is free, 8 is most expensive</p>
+
+            <input type="text" name="min" value="" placeholder="Enter a minimum price"
+            class="input-price"
+            />
+            <br />
+
+            <input type="text" name="max" value="" placeholder="Enter a maximum price"
+            class="input-price"
+            />
+            <br/>
+            <input type="submit"
+            name="submit"
+            value="Submit Price"
+            class="submit"
+            />
+            <br/>
+            <ul id="price-ranged-activities"></ul>
+        </form>
 
         <script src="index.js"></script>
+
     </body>
-
-
 
 </html>
