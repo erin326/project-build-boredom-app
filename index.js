@@ -13,10 +13,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function displayActivities(object) {
         const activityList = document.getElementById('activity-list');
-        const li = document.createElement('li');
-            // const ul = document.getElementById(`${buttonType}-list`);
-        li.innerHTML = object.activity;
-        activityList.appendChild(li);
+        const boredomActivity = document.createElement('p');
+        boredomActivity.innerHTML = object.activity;
+
+        const likeButton = document.createElement('button');
+        likeButton.className = 'like-btn';
+        likeButton.textContent = 'like';
+
+        const likeCount = document.createElement('p');
+        likeCount.id = "like-count";
+
+        let like = 0;
+        
+        function increaseLikes() {
+            like++;
+            if(like === 1) {
+                likeCount.innerHTML = `${like} like`;
+            }else {
+                likeCount.innerHTML = `${like} likes`;
+            }
+            
+        }
+       
+        likeButton.addEventListener('click', increaseLikes);
+        
+        boredomActivity.appendChild(likeButton);
+        boredomActivity.appendChild(likeCount);
+        
+        activityList.appendChild(boredomActivity);
     }
 
     function fetchActivitiesByType(buttonType) {
@@ -27,45 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
-    // function createButtons(category) {
-    //     fetch(`http://www.boredapi.com/api/activity?type=${category}`)
-    //    .then(response => response.json())
-    //    .then(object =>{ 
-    //        const buttons = document.querySelectorAll('.selection button');
 
-    //        for(const button of buttons) {
-    //            button.addEventListener('click', function(e) {
-    //                const eventTarget = e.target;
-    //                const active = document.querySelector('active');
-
-    //                if(active) {
-    //                    active.classList.remove('active');
-    //                }
-
-    //                eventTarget.classList.add('active');
-
-    //                const p = document.createElement('p');
-                   
-
-    //                //how to loop through entire api? is it not possible with this API?
-    //                if(button.getAttribute('data-name') === object.type) {
-    //                    category = object.type;
-    //                    activityList.style.display = 'block';
-    //                } else{
-    //                    activityList.style.display = 'none';
-    //                }
-    //            })
-    //        }
-
-    //       })
-
-    // }
-
-
-
-  
-
-    
     const educationButton = document.getElementById('education-button');
     educationButton.addEventListener('click',
     function(){
@@ -126,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const submitButton = document.querySelector('.submit');
 
     submitButton.addEventListener('click', function(event) {
-        console.log(1);
+        
         event.preventDefault();
         let min = (priceRangeInput[0].value) / 10;
         let max = (priceRangeInput[1].value) / 10;
@@ -139,28 +125,81 @@ document.addEventListener('DOMContentLoaded', function() {
            const li = document.createElement('li');
 
            const price = object.price * 10; 
-
+            
            if(priceRangeInput[1].value > 8) {
             li.innerHTML = `${priceRangeInput[1].value} is an invalid price level. Please choose a level between 0 and 8.`;
-            } else{
+            } else if(object.activity !== li.textContent){
             li.innerHTML = `${object.activity}. Price level: ${price}`;
             }
 
             priceRangedList.appendChild(li);
-
-        
-
-        //    event.preventDefault();
+           
         })
 
     }); 
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+    
+    // function createButtons(category) {
+    //     fetch(`http://www.boredapi.com/api/activity?type=${category}`)
+    //    .then(response => response.json())
+    //    .then(object =>{ 
+    //        const buttons = document.querySelectorAll('.selection button');
+
+    //        for(const button of buttons) {
+    //            button.addEventListener('click', function(e) {
+    //                const eventTarget = e.target;
+    //                const active = document.querySelector('active');
+
+    //                if(active) {
+    //                    active.classList.remove('active');
+    //                }
+
+    //                eventTarget.classList.add('active');
+
+    //                const p = document.createElement('p');
+                   
+
+    //                //how to loop through entire api? is it not possible with this API?
+    //                if(button.getAttribute('data-name') === object.type) {
+    //                    category = object.type;
+    //                    activityList.style.display = 'block';
+    //                } else{
+    //                    activityList.style.display = 'none';
+    //                }
+    //            })
+    //        }
+
+    //       })
+
+    // }
+
+    // add like button
+    //
+
 
 
  
        
      
 
-//fetch random activities
 
  
      
